@@ -180,7 +180,7 @@ const bgVideoColor = css({
 })
 
 function HomePage(state) {
-  document.title = 'azur marketing & communication sàrl - Votre agence à Bulle';
+  document.title = 'Cobalt - Creative IT Engineering';
   document.querySelector('[property="og:image"]').setAttribute('content', 'https://azur-marketing.ch/card.png');
   document.querySelector('[property="og:url"]').setAttribute('content', location.href)
 
