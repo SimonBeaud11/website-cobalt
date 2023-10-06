@@ -219,7 +219,7 @@ function HomePage(state) {
 
       <div className={section + ' articles'}>
         <div className={fullWidthContainer}>
-          <h2>Articles </h2>
+          <h2>Articles Cobalt</h2>
           <Link href="/articles">Tous les articles <span className="rightArr">↑</span></Link>
         </div>
 

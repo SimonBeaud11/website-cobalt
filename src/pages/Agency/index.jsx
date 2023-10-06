@@ -15,7 +15,7 @@ export const init = (state) => [
   },
   loadStatic({
     loader: async () => {
-      const response = await fetch(`https://wp.azur-marketing.ch/graphql`, {
+      const response = await fetch(`https://admin.cobalt-it.ch/graphql`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
