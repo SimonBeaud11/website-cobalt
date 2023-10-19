@@ -126,12 +126,7 @@ const Services = (state) => {
 
   return (
     <div>
-      <div className={container}>
-        <x className={h1} innerHTML={contents.find( objByProperty('databaseId', 70) ).content} />
-        <div className={grid}>
-          {state.projectlist.map((project) => projectItem(project))}
-        </div>
-      </div>
+
 
       <div className={section(sectionRefs)}>
         <div className={fullWidthContainer}>
