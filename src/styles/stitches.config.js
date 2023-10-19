@@ -3,7 +3,7 @@ import { createCss } from '@stitches/core'
 export const { styled, css, global, keyframes, getCssString, theme } = createCss({
   theme: {
     colors: {
-      background: 'hsl(0deg 0% 0%)',
+      background: 'hsl(0deg 0% 71.8%)',
       altBackground: 'hsl(0deg 0% 6%)',
       text: 'hsl(0deg 0% 100%)',
       accent: 'hsl(52deg 100% 70%)',
