@@ -120,7 +120,7 @@ const Header = (state) => (
       <div className={inner}>
         {Logo(state)}
         <button onclick={ToggleNav}>
-          Menu
+         Cobalt
         </button>
       </div>
     </div>
