@@ -132,10 +132,6 @@ const Services = (state) => {
         <div className={fullWidthContainer}>
           <h2>Services</h2>
         </div>
-
-        <div className={container}>
-          <x className={refs} innerHTML={contents.find( objByProperty('databaseId', 65) ).content} />
-        </div>
       </div>
     </div>
   )
