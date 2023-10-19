@@ -37,8 +37,8 @@ export const init = (state) => [
         },
         body: JSON.stringify({
           query: `
-            query ($projectsID: Int!, $contentsID: Int!) {
-              posts(first: 999, where: {categoryId: $projectsID}) {
+            query ($servicesID: Int!, $contentsID: Int!) {
+              posts(first: 999, where: {categoryId: $servicesID}) {
                 nodes {
                   slug
                   title
@@ -58,12 +58,12 @@ export const init = (state) => [
               }
             }`,
           variables: {
-            'projectsID': 3,
-            'contentsID': 7
+            'servicesID': 16, // Remplacez par l'ID de la catégorie "services"
+            'contentsID': 16, // Remplacez par l'ID de la catégorie "contents"
           },
         }),
       })
-        .then((res) => res.json())
+        .then((res) => res.json());
       const simplifiedProjects = response.data.posts.nodes.map((post) => ({
         slug: post.slug,
         title: post.title,
