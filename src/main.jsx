@@ -15,12 +15,22 @@ import App from '/src/components/core/App'
 
 const routes = {
   '/': import('./pages/HomePage'),
+
+  '/services': import('./pages/Services'),
+  '/secteursActivites': import('./pages/SecteursActivites'),
+  '/realisations': import('./pages/Realisations'),
+  '/contact': import('./pages/Contact'),
+  
+
+
+
   '/agence': import('./pages/Agency'),
   '/projets': import('./pages/ProjectList'),
   '/projets/:id': import('./pages/ProjectDetails'),
   '/articles': import('./pages/ArticleList'),
   '/articles/:id': import('./pages/ArticleDetails'),
-  '/contact': import('./pages/Contact'),
+
+ 
   '/:splat*': import('./pages/NotFoundPage')
 }
 
