@@ -23,7 +23,7 @@ export const init = (state, location) => [
   },
   loadStatic({
     loader: async () => {
-      const response = await fetch(`https://admin.cobalt-it.ch/graphqll`, {
+      const response = await fetch(`https://admin.cobalt-it.ch/graphql`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
