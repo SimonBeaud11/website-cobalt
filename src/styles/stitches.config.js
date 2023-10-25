@@ -3,10 +3,21 @@ import { createCss } from '@stitches/core'
 export const { styled, css, global, keyframes, getCssString, theme } = createCss({
   theme: {
     colors: {
-      background: 'hsl(0deg 0% 71.8%)',
-      altBackground: 'hsl(0deg 0% 6%)',
-      text: 'hsl(0deg 0% 100%)',
-      accent: 'hsl(52deg 100% 70%)',
+      violet1: '#591CE6',
+      violet2: '#9432C5',
+      violet3: '#B13DB5',
+      orange1: '#FB8B61',
+      orange2: '#FA7277',
+      orange3: '#F9598D',
+      gradient: 'linear-gradient(48deg, var(--colors-violet1), var(--colors-violet2), var(--colors-violet3), var(--colors-orange1), var(--colors-orange2), var(--colors-orange3))',
+      gradientBlue: 'linear-gradient(48deg, var(--colors-violet1), var(--colors-violet2), var(--colors-violet3))',
+      gradientOrange: 'linear-gradient(48deg, var(--colors-orange1), var(--colors-orange2), var(--colors-orange3))',
+      creme1: 'FDF9F6',
+      creme2: 'F9F0E6',
+      background: '#ffffff',
+      altBackground: '#010101',
+      text: '#151515',
+      accent: 'var(--colors-orange1)',
     },
     space: {
       1: '4px',
