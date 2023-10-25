@@ -30,6 +30,18 @@ const globalStyles = global({
     {
       fontFamily: 'SF Pro',
       fontStyle: 'normal',
+      fontWeight: '300',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Light.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '300',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-LightItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
       fontWeight: '400',
       src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Regular.otf') format('opentype')`,
     },
@@ -43,25 +55,25 @@ const globalStyles = global({
       fontFamily: 'SF Pro',
       fontStyle: 'normal',
       fontWeight: '500',
-      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Semibold.otf') format('opentype')`,
-    },
-    {
-      fontFamily: 'SF Pro',
-      fontStyle: 'italic',
-      fontWeight: '500',
-      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-SemiboldItalic.otf') format('opentype')`,
-    },
-    {
-      fontFamily: 'SF Pro',
-      fontStyle: 'normal',
-      fontWeight: '600',
       src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Medium.otf') format('opentype')`,
     },
     {
       fontFamily: 'SF Pro',
       fontStyle: 'italic',
-      fontWeight: '600',
+      fontWeight: '500',
       src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-MediumItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '600',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Semibold.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '600',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-SemiboldItalic.otf') format('opentype')`,
     },
     {
       fontFamily: 'SF Pro',
@@ -114,6 +126,7 @@ const globalStyles = global({
     fontSize: '$body',
     '@tablet': {
       fontSize: '$bodyDt',
+      fontWeight: '400'
     },
   },
 
@@ -134,18 +147,23 @@ const globalStyles = global({
     fontWeight: '$2',
     fontSize: '$1',
     '@tablet': {
-      fontSize: '$1Dt'
-    }
-  },
-  'h1, .h1': {
-    fontSize: '$2',
-    fontWeight: '$3',
-    '@tablet': {
       fontSize: '$2Dt'
     }
   },
+  'h1, .h1': {
+    fontSize: '$1Dt',
+    fontWeight: '$3',
+    '@tablet': {
+      fontSize: '$1Dt'
+    }
+  },
   'h2, .h2': {
-    fontWeight: '$1',
+    fontWeight: '$2',
+    lineHeight: '$small'
+  },
+  'h3, .h3': {
+    fontWeight: '$2',
+    fontSize: '$2Dt'
   },
 
   '.cardTitle' : {

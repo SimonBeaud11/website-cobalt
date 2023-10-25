@@ -9,11 +9,14 @@ export const { styled, css, global, keyframes, getCssString, theme } = createCss
       orange1: '#FB8B61',
       orange2: '#FA7277',
       orange3: '#F9598D',
+      fadeViolet1: '#591CE61A',
+      fadeViolet2: '#9432C51A',
+      fadeViolet3: '#B13DB51A',
       gradient: 'linear-gradient(48deg, var(--colors-violet1), var(--colors-violet2), var(--colors-violet3), var(--colors-orange1), var(--colors-orange2), var(--colors-orange3))',
       gradientBlue: 'linear-gradient(48deg, var(--colors-violet1), var(--colors-violet2), var(--colors-violet3))',
       gradientOrange: 'linear-gradient(48deg, var(--colors-orange1), var(--colors-orange2), var(--colors-orange3))',
-      creme1: 'FDF9F6',
-      creme2: 'F9F0E6',
+      creme1: '#FDF9F6',
+      creme2: '#F9F0E6',
       background: '#ffffff',
       altBackground: '#010101',
       text: '#151515',
@@ -36,14 +39,14 @@ export const { styled, css, global, keyframes, getCssString, theme } = createCss
 
       'smallDt': '18px',
       'bodyDt': '21px',
-      '1Dt': '27px',
-      '2Dt': '54px',
+      '1Dt': '3.4rem',
+      '2Dt': '2.4rem',
     },
     fonts: {},
     fontWeights: {
-      1: '500', // medium
-      2: '600', // semi bold
-      3: '900', // black
+      1: '400', // Regular
+      2: '700', // Bold
+      3: '800', // Heavy
     },
     lineHeights: {
       small: '1.3',

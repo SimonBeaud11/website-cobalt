@@ -1,9 +1,10 @@
 import { loadStatic, Link } from 'hyperstatic'
 import { css } from '/src/styles/stitches.config'
 import { objByProperty } from '/src/lib/Data'
-import { container, grid, card, fullWidthContainer, section } from '/src/styles/utils.css'
+import { container, grid, flex, titleMargin, card, fullWidthContainer, section } from '/src/styles/utils.css'
 import { articleItem, projectItem } from '/src/components/core/CardItem'
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
+import cLogo from '/src/assets/logo/c.svg'
 
 
 import AOS from 'aos'
@@ -150,12 +151,22 @@ const header = css({
     fontStyle: 'normal',
     fontWeight: '400',
     '&:hover': {
-      background: '$gradient',
+      backgroundColor: '$gradient',
       color: '$background',
     },
     '& a': {
       opacity: 1,
-    }
+    },
+    '& a:after': {
+      content: "→",
+      marginLeft: '-10px',
+      opacity: '0',
+      transition: 'all .2s ease-in-out',
+    },
+    '&:hover a:after': {
+      marginLeft: '8px',
+      opacity: '1',
+    },
   },
 })
 const offsetDiv = css({
@@ -184,6 +195,101 @@ const bgVideoColor = css({
   zIndex: '-1',
 })
 const scroll = css({
+})
+const creme = css({
+  background: '$creme2',
+  padding: '20px 0'
+})
+const w70 = css({
+  width: '65%',
+  marginRight: '5%'
+})
+const w30 = css({
+  width: '35%'
+})
+const presentationContainer = css({
+  'h2': {
+    marginBottom: '40px',
+  },
+  'p': {
+    textAlign: 'justify',
+  },
+})
+const serviceContainer = css({
+  gap: '20px'
+})
+const fadeViolet1 = css({
+  background: '$fadeViolet1',
+  '&:after': {
+    background: '$violet1',
+  },
+})
+const fadeViolet2 = css({
+  background: '$fadeViolet2',
+  '&:after': {
+    background: '$violet2',
+  },
+})
+const fadeViolet3 = css({
+  background: '$fadeViolet3',
+  '&:after': {
+    background: '$violet3',
+  },
+})
+const violet1 = css({
+  background: '$violet1',
+})
+const violet2 = css({
+  background: '$violet2',
+})
+const violet3 = css({
+  background: '$violet3',
+})
+const orange1 = css({
+  background: '$orange1',
+})
+const orange2 = css({
+  background: '$orange2',
+})
+const orange3 = css({
+  background: '$orange3',
+})
+const gradientOrange = css({
+  backgroundImage: '$gradientOrange',
+})
+const service = css({
+  width: '100%',
+  height: '500px',
+  borderRadius: '40px',
+  position: 'relative',
+  '&:after': {
+    content: "→",
+    color: '$background',
+    display: 'flex',
+    height: '52px',
+    width: '52px',
+    position: 'absolute',
+    bottom: '0',
+    right: '0',
+    borderRadius: '0px 0px 32px 0px',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+})
+const secteur = css({
+  display: 'flex',
+  width: '100%',
+  alignItems: 'center',
+})
+const carreSecteur = css({
+  width: '2.4rem',
+  height: '2.4rem',
+  marginRight: '20px',
+})
+const titleGradient = css({
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  width: 'fit-content'
 })
 
 function HomePage(state) {
@@ -230,6 +336,64 @@ function HomePage(state) {
           <source src={videoSource} type="video/mp4"></source>
         </video>
       </header>
+
+      <div className={section + ' ' + creme + ' ' + titleMargin}>
+        <div className={fullWidthContainer}>
+          <h3>Service Monitoring</h3>
+        </div>
+      </div>
+
+      <div className={section}>
+        <div className={fullWidthContainer + ' ' + flex}>
+          <div className={w70 + ' ' + presentationContainer}>
+            <h2>La technologie au service de votre organisation</h2>
+            <p>
+              Nous concevons et intégrons des solutions informatiques de pointe, incluant la migration vers le Cloud, le développement d'applications web et mobiles, ainsi que la création de sites internet sur mesure.
+              <br></br>
+              Située à Bulle, dans le canton de Fribourg, notre entreprise a tissé des liens solides dans la région tout en étendant son rayon d’action à travers les cantons romands. Vous pouvez compter sur notre approche innovante et notre expertise technologique pour relever tous vos défis digitaux !</p>
+          </div>
+          <div className={w30}>
+            <img src={cLogo}></img>
+          </div>
+        </div>
+      </div>
+
+      <div className={section}>
+        <div className={fullWidthContainer}>
+          <h2 className={titleMargin}>Nos services</h2>
+        </div>
+
+        <div className={container}>
+          <div className={flex + ' ' + serviceContainer}>
+            <div className={service + ' ' + fadeViolet1}></div>
+            <div className={service + ' ' + fadeViolet2}></div>
+            <div className={service + ' ' + fadeViolet3}></div>
+          </div>
+        </div>
+      </div>
+
+      <div className={section}>
+        <div className={fullWidthContainer}>
+          <h1 className={titleMargin + ' ' + titleGradient + ' ' + gradientOrange}>Secteurs d'activités</h1>
+        </div>
+
+        <div className={container}>
+          <div className={serviceContainer}>
+            <div className={secteur + ' ' + titleMargin}>
+              <div className={carreSecteur + ' ' + orange3}></div>
+              <h2>Administration publique</h2>
+            </div>
+            <div className={secteur + ' ' + titleMargin}>
+              <div className={carreSecteur + ' ' + orange2}></div>
+              <h2>Gouvernance d'entreprise</h2>
+            </div>
+            <div className={secteur + ' ' + titleMargin}>
+              <div className={carreSecteur + ' ' + orange1}></div>
+              <h2>Association</h2>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className={section}>
         <div className={fullWidthContainer}>
