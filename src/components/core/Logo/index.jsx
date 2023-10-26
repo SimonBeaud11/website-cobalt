@@ -20,7 +20,6 @@ const Logo = (state, color) => {
   const route = state.location.route
   const mustBeBlack = route === '/contact' || route === '/articles/:id'
   const logoSrc = (mustBeBlack || color === 'black') ? logoBlackSrc
-    : route === '/' ? logoBlackSrc
     : logoWhiteSrc
 
   return (

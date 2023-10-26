@@ -2,10 +2,119 @@ import { global } from './stitches.config'
 
 const globalStyles = global({
   // Fonts
-  '@import': 'url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500..900;1,500..900&display=swap")',
+  '@font-face': [
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '100',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Ultralight.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '100',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-UltralightItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '200',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Thin.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '200',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-ThinItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '300',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Light.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '300',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-LightItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '400',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Regular.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '400',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-RegularItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '500',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Medium.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '500',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-MediumItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '600',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Semibold.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '600',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-SemiboldItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '700',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Bold.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '700',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-BoldItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '800',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Heavy.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '800',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-HeavyItalic.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'normal',
+      fontWeight: '900',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-Black.otf') format('opentype')`,
+    },
+    {
+      fontFamily: 'SF Pro',
+      fontStyle: 'italic',
+      fontWeight: '900',
+      src: `url('../src/assets/fonts/SFPro/SF-Pro-Display-BlackItalic.otf') format('opentype')`,
+    },
+  ],
 
   'html': {
-    fontFamily: "'Work Sans', sans-serif",
+    fontFamily: 'SF Pro, sans-serif',
     fontWeight: '$1',
     lineHeight: '$small',
     color: '$text',
@@ -17,12 +126,12 @@ const globalStyles = global({
     fontSize: '$body',
     '@tablet': {
       fontSize: '$bodyDt',
+      fontWeight: '400'
     },
   },
 
   // Text selection styling
   '::selection': {
-    background: '$altBackground',
     color: '$accent',
   },
 
@@ -38,18 +147,23 @@ const globalStyles = global({
     fontWeight: '$2',
     fontSize: '$1',
     '@tablet': {
-      fontSize: '$1Dt'
-    }
-  },
-  'h1, .h1': {
-    fontSize: '$2',
-    fontWeight: '$3',
-    '@tablet': {
       fontSize: '$2Dt'
     }
   },
+  'h1, .h1': {
+    fontSize: '$1Dt',
+    fontWeight: '$3',
+    '@tablet': {
+      fontSize: '$1Dt'
+    }
+  },
   'h2, .h2': {
-    fontWeight: '$1',
+    fontWeight: '$2',
+    lineHeight: '$small'
+  },
+  'h3, .h3': {
+    fontWeight: '$2',
+    fontSize: '$2Dt'
   },
 
   '.cardTitle' : {

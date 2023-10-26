@@ -38,6 +38,14 @@ export const grid = css({
   },
 })
 
+export const flex = css({
+  display: 'flex',
+})
+
+export const titleMargin = css({
+  marginBottom: '50px',
+})
+
 export const card = css({
   display: 'block',
   textDecoration: 'none',

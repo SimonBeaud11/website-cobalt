@@ -56,7 +56,7 @@ export const init = (state) => [
 // View
 const element = css({
   marginBlock: '$4 $6',
-  display: 'grid',
+  display: 'block',
   gridTemplateColumns: 'repeat(1, 1fr)',
   gridGap: '$4',
   '@desktop': {
@@ -84,9 +84,9 @@ const element = css({
 })
 
 const Contact = (state) => {
-  document.title = 'Contact — azur marketing & communication sàrl'
-  document.querySelector('[property="og:title"]').setAttribute('content', "Contact — azur marketing & communication sàrl")
-  document.querySelector('[property="og:image"]').setAttribute('content', 'https://azur-marketing.ch/card.png');
+  document.title = 'Contact — Cobalt Technologies Sàrl'
+  document.querySelector('[property="og:title"]').setAttribute('content', "Contact — Cobalt Technologies Sàrl")
+  document.querySelector('[property="og:image"]').setAttribute('content', 'https://cobalt-it.ch/card.png');
   document.querySelector('[property="og:url"]').setAttribute('content', location.href)
 
   const contents = state.contents.contact
