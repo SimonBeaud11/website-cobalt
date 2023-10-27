@@ -98,9 +98,13 @@ export const card = css({
 
 export const section = css({
   paddingBlock: '$3 $6',
-  '& + .articles': {
-    backgroundColor: '$accent',
+  '& + .gradient': {
+    backgroundColor: '$orange1',
     color: '$background',
+  },
+  '& + .testimonial': {
+    backgroundColor: '$creme1',
+    color: '$altBackground',
   },
   [`& .${fullWidthContainer}`]: {
     marginBlockEnd: '$5',

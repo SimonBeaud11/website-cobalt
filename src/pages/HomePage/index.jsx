@@ -2,9 +2,10 @@ import { loadStatic, Link } from 'hyperstatic'
 import { css } from '/src/styles/stitches.config'
 import { objByProperty } from '/src/lib/Data'
 import { container, grid, flex, titleMargin, card, fullWidthContainer, section } from '/src/styles/utils.css'
-import { articleItem, projectItem } from '/src/components/core/CardItem'
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
 import cLogo from '/src/assets/logo/c.svg'
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 
 import AOS from 'aos'
@@ -315,6 +316,7 @@ function HomePage(state) {
     backgroundImage: `url(${state.contents.home.find(objByProperty('databaseId', 91)).featuredImage.node.mediaItemUrl})`,
   }
 
+
   return (
     <div>
       <header className={header}>
@@ -395,31 +397,36 @@ function HomePage(state) {
         </div>
       </div>
 
-      <div className={section}>
-        <div className={fullWidthContainer}>
-          <h2>Projets récents</h2>
-          <Link href="/projets">Tous les projets <span className="rightArr">↑</span></Link>
-        </div>
-
-        <div className={container}>
-          <div className={grid}>
-            <div className={offsetDiv} />
-            {state.projectlist.slice(0, 3).map((project) => projectItem(project))}
+      <div className={section + ' testimonial'}>
+          <div className={fullWidthContainer}>
+            <h2>Ils nous font confiance !</h2>
           </div>
-        </div>
       </div>
 
-      <div className={section + ' articles'}>
+    
+
+      <div className={section}>
         <div className={fullWidthContainer}>
-          <h2>Articles Cobalt</h2>
-          <Link href="/articles">Tous les articles <span className="rightArr">↑</span></Link>
-        </div>
+           <h2>Nos dernières réalisations</h2>
+         </div>
 
+        <div className={container}>
+        <iframe
+           src="https://igruyere.ch/api?commune=Echarlens&style=3"
+          id="ifrm"
+          scrolling="yes"
+          style={{ width: '100%', height: '500px' }}
+          >
+        </iframe>
+  </div>
+</div>
 
-      <div className={container}>
-          <div className={grid(articleList)}>
-            {state.articlelist.slice(0, 2).map((article) => articleItem(article))}
-          </div>
+      <div className={section + ' gradient'}>
+        <div className={fullWidthContainer}>
+          <h2>Une idée de projet ?</h2>     
+          <span className="linkWrapper button">
+            <Link href="/contact">Contactez nous !</Link>
+          </span> 
         </div>
       </div>
     </div>
