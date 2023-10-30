@@ -99,7 +99,7 @@ export const card = css({
 export const section = css({
   paddingBlock: '$3 $6',
   '& + .gradient': {
-    backgroundColor: '$orange1',
+    background: '$gradientSection',
     color: '$background',
   },
   '& + .testimonial': {

@@ -415,7 +415,7 @@ function HomePage(state) {
            src="https://igruyere.ch/api?commune=Echarlens&style=3"
           id="ifrm"
           scrolling="yes"
-          style={{ width: '100%', height: '500px' }}
+          style={{ minWidth: '100%' }}
           >
         </iframe>
   </div>

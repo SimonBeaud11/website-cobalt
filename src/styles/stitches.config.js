@@ -15,6 +15,7 @@ export const { styled, css, global, keyframes, getCssString, theme } = createCss
       gradient: 'linear-gradient(48deg, var(--colors-violet1), var(--colors-violet2), var(--colors-violet3), var(--colors-orange1), var(--colors-orange2), var(--colors-orange3))',
       gradientBlue: 'linear-gradient(48deg, var(--colors-violet1), var(--colors-violet2), var(--colors-violet3))',
       gradientOrange: 'linear-gradient(48deg, var(--colors-orange1), var(--colors-orange2), var(--colors-orange3))',
+      gradientSection: 'linear-gradient(14deg, rgba(89, 28, 230, 0.6) 13.28%, rgba(93, 30, 228, 0.6) 18.72%, rgba(106, 34, 221, 0.6) 24.15%, rgba(126, 42, 209, 0.6) 29.59%, rgba(155, 53, 193, 0.6) 35.03%, rgba(193, 68, 172, 0.6) 40.46%, rgba(238, 85, 147, 0.6) 45.9%, rgba(249, 89, 141, 0.6) 47.26%, rgba(250, 102, 130, 0.6) 52.02%, rgba(250, 122, 112, 0.6) 62.21%, rgba(251, 135, 101, 0.6) 71.73%, rgba(251, 139, 97, 0.6) 81.24%);',
       creme1: '#FDF9F6',
       creme2: '#F9F0E6',
       background: '#ffffff',
