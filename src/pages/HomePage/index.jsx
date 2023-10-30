@@ -295,7 +295,7 @@ const titleGradient = css({
 
 function HomePage(state) {
   document.title = 'Cobalt - Creative IT Engineering';
-  document.querySelector('[property="og:image"]').setAttribute('content', 'https://azur-marketing.ch/card.png');
+  document.querySelector('[property="og:image"]').setAttribute('content', 'https://cobalt-it.ch/card.png');
   document.querySelector('[property="og:url"]').setAttribute('content', location.href);
 
   const contents = state.contents.home;

@@ -159,7 +159,7 @@ const ArticleDetails = (state) => {
   document.querySelector('[property="og:description"]').setAttribute('content', article.excerptRaw)
   document.querySelector('[property="og:url"]').setAttribute('content', location.href)
   if (article.featuredImage == undefined) {
-    document.querySelector('[property="og:image"]').setAttribute('content', 'https://azur-marketing.ch/card.png');
+    document.querySelector('[property="og:image"]').setAttribute('content', 'https://cobalt-it.ch/card.png');
   } else {
     document.querySelector('[property="og:image"]').setAttribute('content', article.featuredImage);
   }

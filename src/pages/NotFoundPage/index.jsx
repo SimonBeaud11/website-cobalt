@@ -7,8 +7,8 @@ const notFound = css({
   paddingBlockEnd: '$6',
 })
 
-document.title = 'Erreur 404 — azur marketing & communication sàrl'
-document.querySelector('[property="og:image"]').setAttribute('content', 'https://azur-marketing.ch/card.png');
+document.title = 'Erreur 404 — Cobalt Creative IT Engineering'
+document.querySelector('[property="og:image"]').setAttribute('content', 'https://cobalt-it.ch/card.png');
 document.querySelector('[property="og:url"]').setAttribute('content', location.href)
 
 const NotFoundPage = () => (

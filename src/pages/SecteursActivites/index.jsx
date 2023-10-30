@@ -121,7 +121,7 @@ const ProjectList = (state) => {
   const contents = state.contents.projects
   document.title = 'Projets — azur marketing & communication sàrl'
   document.querySelector('[property="og:title"]').setAttribute('content', "Projets — azur marketing & communication sàrl")
-  document.querySelector('[property="og:image"]').setAttribute('content', 'https://azur-marketing.ch/card.png');
+  document.querySelector('[property="og:image"]').setAttribute('content', 'https://cobalt-it.ch/card.png');
   document.querySelector('[property="og:url"]').setAttribute('content', location.href)
 
   return (

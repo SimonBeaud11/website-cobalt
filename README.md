@@ -1,14 +1,14 @@
 <h1 align="center">
-  azur marketing & communication sàrl 
+  Cobalt – Creative IT Engineering
 </h1>
 
 ## 🚀 Quick start:
 
 ```
 # Clone project
-git clone https://github.com/azur1638/azur.git
+git clone https://github.com/SimonBeaud11/website-cobalt.git
 
-cd azur
+cd website-cobalt
 
 npm install        # Install dependencies
 npm start          # Dev server + live reload

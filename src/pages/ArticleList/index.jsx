@@ -96,7 +96,7 @@ const h1 = css({
 const ArticleList = (state) => {
   document.title = 'Articles — azur marketing & communication sàrl'
   document.querySelector('[property="og:title"]').setAttribute('content', "Articles — azur marketing & communication sàrl")
-  document.querySelector('[property="og:image"]').setAttribute('content', 'https://azur-marketing.ch/card.png');
+  document.querySelector('[property="og:image"]').setAttribute('content', 'https://cobalt-it.ch/card.png');
   document.querySelector('[property="og:url"]').setAttribute('content', location.href)
 
   const contents = state.contents.articles

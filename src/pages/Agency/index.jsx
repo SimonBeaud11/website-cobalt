@@ -191,7 +191,7 @@ const Modal = (prestationId, contents) => (
 const Agency = (state) => {
   document.title = "L'agence à Bulle — azur marketing & communication sàrl"
   document.querySelector('[property="og:title"]').setAttribute('content', "L'agence à Bulle — azur marketing & communication sàrl")
-  document.querySelector('[property="og:image"]').setAttribute('content', 'https://azur-marketing.ch/card.png');
+  document.querySelector('[property="og:image"]').setAttribute('content', 'https://cobalt-it.ch/card.png');
   document.querySelector('[property="og:url"]').setAttribute('content', location.href)
   
   const contents = state.contents.agency
