@@ -302,6 +302,7 @@ function HomePage(state) {
 
   // Récupération de la vidéo de fond
   var headerContent = contents.find(objByProperty('databaseId', 1969)).content;
+  
   const parser = new DOMParser();
   const doc = parser.parseFromString(headerContent, "text/html");
   const videoElement = doc.querySelector("video");
@@ -315,6 +316,9 @@ function HomePage(state) {
   const bgImage = {
     backgroundImage: `url(${state.contents.home.find(objByProperty('databaseId', 91)).featuredImage.node.mediaItemUrl})`,
   }
+
+
+
 
 
   return (
@@ -367,9 +371,38 @@ function HomePage(state) {
 
         <div className={container}>
           <div className={flex + ' ' + serviceContainer}>
-            <div className={service + ' ' + fadeViolet1}></div>
-            <div className={service + ' ' + fadeViolet2}></div>
-            <div className={service + ' ' + fadeViolet3}></div>
+            <div className={service + ' ' + fadeViolet1}>
+              <h2>Développement</h2>
+              <ul>
+                <li>Applications Web</li>
+                <li>Applications mobiles</li>
+                <li>API</li>
+                <li>Logiciels sur mesure</li>
+              </ul>
+
+            </div>
+            <div className={service + ' ' + fadeViolet2}>
+              <h2>Intégration</h2>
+              <ul>
+                <li>Transition Cloud</li>
+                <li>ERP/CRM</li>
+                <li>Business Intelligence (BI)</li>
+                <li>Suite Microsoft</li>
+                <li>Outils tiers</li>
+              </ul>
+
+            </div>
+            <div className={service + ' ' + fadeViolet3}>
+              <h2>Web</h2>
+              <ul>
+                <li>Site Internet</li>
+                <li>E-Commerce</li>
+                <li>Gestionnaire de contenus</li>
+                <li>Expérience utilisateur</li>
+                <li>Refonte d'outils existants</li>
+              </ul>
+
+            </div>
           </div>
         </div>
       </div>
@@ -385,14 +418,32 @@ function HomePage(state) {
               <div className={carreSecteur + ' ' + orange3}></div>
               <h2>Administration publique</h2>
             </div>
+            <p>Nous proposons une gamme variée de solutions pour les administrations publiques. visant à catalyser leur transition vers le numérique.
+              Nos solutions optimisent l'efficacité, réduisant les charges administratives et favorisant une organisation fluide.
+              En offrant des outils adaptés aux besoins spécifiques des administrations, nous aidons à gagner un temps précieux, à améliorer la prestation de services et à renforcer la connectivité entre parties prenantes.
+              Cette transition digitale permet d'exploiter pleinement les avantages de la technologie moderne pour créer des administrations plus agiles, réactives et orientées vers l'avenir.
+            </p>
+
             <div className={secteur + ' ' + titleMargin}>
               <div className={carreSecteur + ' ' + orange2}></div>
               <h2>Gouvernance d'entreprise</h2>
             </div>
+            <p>
+              Nous offrons une gamme complète de solutions conçues spécialement pour les entreprises, visant à libérer leur potentiel en leur permettant de se concentrer sur leur coeur de métier.
+              Notre approche sur mesure vise à améliorer l'efficacité opérationnelle, à réduire les charges administratives et à accroitre la rentabilité. 
+              En founrissant des solutions adaptées aux besoins spécifiques de chaque entreprise, nous permettons à nos clients de gagner du temps précieux et de maximiser leur productivité tout en renforçant leur compétitivité.
+            </p>
+
             <div className={secteur + ' ' + titleMargin}>
               <div className={carreSecteur + ' ' + orange1}></div>
               <h2>Association</h2>
             </div>
+            <p>
+              Nous proposons une palette de solutions dédiées aux associations, qu'il s'agisse d'organisations événementielles, de clubs sportifs ou encore d'associations caritatives. 
+              Notre objectif est de vous aider à optimiser vos opérations en vous fournissant des outils sur mesure qui simplifient votre gestion quotidienne.
+              En permettant de vous concentrer sur votre passion et votre missions, nos solutions contribuent à améliorer l'organisation interner et à renforcer la participation de vos membres.
+              Grâce à cette approche, votre association peut consacrer plus de temps à son activité principale et offrir une expérience optimale à vos membres, contribuant ainsi à votre croissance et à votre réussite continue.
+            </p>
           </div>
         </div>
       </div>
@@ -400,6 +451,8 @@ function HomePage(state) {
       <div className={section + ' testimonial'}>
           <div className={fullWidthContainer}>
             <h2>Ils nous font confiance !</h2>
+            
+          
           </div>
       </div>
 
@@ -414,7 +467,7 @@ function HomePage(state) {
         <iframe
            src="https://igruyere.ch/api?commune=Echarlens&style=3"
           id="ifrm"
-          scrolling="yes"
+          scrolling="no"
           style={{ minWidth: '100%' }}
           >
         </iframe>
