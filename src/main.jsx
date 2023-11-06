@@ -17,12 +17,11 @@ const routes = {
   '/': import('./pages/HomePage'),
 
   '/services': import('./pages/Services'),
-  '/secteursActivites': import('./pages/SecteursActivites'),
+  '/secteurs-activites': import('./pages/SecteursActivites'),
   '/realisations': import('./pages/Realisations'),
   '/contact': import('./pages/Contact'),
+  '/contact/:id': import('./pages/ContactDetails'),
   
-
-
 
   '/agence': import('./pages/Agency'),
   '/projets': import('./pages/ProjectList'),

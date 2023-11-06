@@ -140,13 +140,17 @@ const header = css({
   '@tablet': {
     minHeight: '100vh',
   },
+  '& p': {
+    fontWeight: '300',
+    margin: '18px 0px 30px 0px',
+  },
   '& .linkWrapper': {
     padding: '8px 20px 8px 20px',
     backgroundColor: 'transparent',
     color: '$background',
     width: 'max-content',
     transition: '$fade',
-    border: '3px solid #FFFFFF',
+    border: '2px solid #FFFFFF',
     borderRadius: '9999px',
     fontSize: '1.2rem',
     fontStyle: 'normal',
@@ -221,20 +225,44 @@ const serviceContainer = css({
 })
 const fadeViolet1 = css({
   background: '$fadeViolet1',
-  '&:after': {
-    background: '$violet1',
+  '.link-box' : {
+    '&:after': {
+      background: '$violet1',
+    },
+    'li a:hover': {
+      color: '$violet1',
+    },
+    'li a:hover:after': {
+      color: '$violet1',
+    }
   },
 })
 const fadeViolet2 = css({
   background: '$fadeViolet2',
-  '&:after': {
-    background: '$violet2',
+  '.link-box' : {
+    '&:after': {
+      background: '$violet2',
+    },
+    'li a:hover': {
+      color: '$violet2',
+    },
+    'li a:hover:after': {
+      color: '$violet2',
+    }
   },
 })
 const fadeViolet3 = css({
   background: '$fadeViolet3',
-  '&:after': {
-    background: '$violet3',
+  '.link-box' : {
+    '&:after': {
+      background: '$violet3',
+    },
+    'li a:hover': {
+      color: '$violet3',
+    },
+    'li a:hover:after': {
+      color: '$violet3',
+    }
   },
 })
 const violet1 = css({
@@ -260,21 +288,56 @@ const gradientOrange = css({
 })
 const service = css({
   width: '100%',
-  height: '500px',
   borderRadius: '40px',
   position: 'relative',
-  '&:after': {
-    content: "→",
-    color: '$background',
-    display: 'flex',
-    height: '52px',
-    width: '52px',
-    position: 'absolute',
-    bottom: '0',
-    right: '0',
-    borderRadius: '0px 0px 32px 0px',
-    alignItems: 'center',
-    justifyContent: 'center'
+  padding: '40px 40px 80px 40px',
+  'h3': {
+    marginBottom: '20px',
+  },
+  '.link-box': {
+    opacity: '1',
+    '&:after': {
+      content: "→",
+      color: '$background',
+      display: 'flex',
+      height: '52px',
+      width: '52px',
+      position: 'absolute',
+      bottom: '0',
+      right: '0',
+      borderRadius: '0px 0px 32px 0px',
+      alignItems: 'center',
+      justifyContent: 'center',
+      transition: 'all .3s ease',
+    },
+    '&:hover:after': {
+      height: '72px',
+      width: '72px',
+      //width: '100%',
+      //borderRadius: '0px 0px 32px 32px',
+    },
+  },
+  'ul': {
+    padding: '10px 0 0 0',
+    listStyle: 'none',
+  },
+  'li': {
+    margin: '8px 0 32px 0',
+    fontWeight: '300',
+    'a': {
+      opacity: '1',
+      '&:after': {
+        content: "→",
+        marginLeft: '6px',
+        alignItems: 'center',
+        justifyContent: 'center',
+        transition: 'all .2s ease',
+      },
+      '&:hover:after': {
+        marginLeft: '12px',
+        fontWeight: '500',
+      },
+    },
   },
 })
 const secteur = css({
@@ -344,13 +407,13 @@ function HomePage(state) {
       </header>
 
       <div className={section + ' ' + creme + ' ' + titleMargin}>
-        <div className={fullWidthContainer}>
+        <div className={container}>
           <h3>Service Monitoring</h3>
         </div>
       </div>
 
       <div className={section}>
-        <div className={fullWidthContainer + ' ' + flex}>
+        <div className={container + ' ' + flex}>
           <div className={w70 + ' ' + presentationContainer}>
             <h2>La technologie au service de votre organisation</h2>
             <p>
@@ -365,50 +428,57 @@ function HomePage(state) {
       </div>
 
       <div className={section}>
-        <div className={fullWidthContainer}>
+        <div className={container}>
           <h2 className={titleMargin}>Nos services</h2>
         </div>
 
         <div className={container}>
           <div className={flex + ' ' + serviceContainer}>
+
             <div className={service + ' ' + fadeViolet1}>
-              <h2>Développement</h2>
-              <ul>
-                <li>Applications Web</li>
-                <li>Applications mobiles</li>
-                <li>API</li>
-                <li>Logiciels sur mesure</li>
-              </ul>
-
+              <Link className='link-box' href="/contact">
+                <h3>Développement</h3>
+                <ul>
+                  <li><Link href="/services">Applications Web</Link></li>
+                  <li><Link href="/services">Applications mobiles</Link></li>
+                  <li><Link href="/services">API</Link></li>
+                  <li><Link href="/services">Logiciels sur mesure</Link></li>
+                </ul>
+              </Link>
             </div>
+
             <div className={service + ' ' + fadeViolet2}>
-              <h2>Intégration</h2>
-              <ul>
-                <li>Transition Cloud</li>
-                <li>ERP/CRM</li>
-                <li>Business Intelligence (BI)</li>
-                <li>Suite Microsoft</li>
-                <li>Outils tiers</li>
-              </ul>
-
+              <Link className='link-box' href="/contact">
+                <h3>Intégration</h3>
+                <ul>
+                  <li><Link href="/services">Transition Cloud</Link></li>
+                  <li><Link href="/services">ERP/CRM</Link></li>
+                  <li><Link href="/services">Business Intelligence (BI)</Link></li>
+                  <li><Link href="/services">Suite Microsoft</Link></li>
+                  <li><Link href="/services">Outils tiers</Link></li>
+                </ul>
+              </Link>
             </div>
+
             <div className={service + ' ' + fadeViolet3}>
-              <h2>Web</h2>
-              <ul>
-                <li>Site Internet</li>
-                <li>E-Commerce</li>
-                <li>Gestionnaire de contenus</li>
-                <li>Expérience utilisateur</li>
-                <li>Refonte d'outils existants</li>
-              </ul>
-
+              <Link className='link-box' href="/contact">
+                <h3>Web</h3>
+                <ul>
+                  <li><Link href="/services">Site Internet</Link></li>
+                  <li><Link href="/services">E-Commerce</Link></li>
+                  <li><Link href="/services">Gestionnaire de contenus</Link></li>
+                  <li><Link href="/services">Expérience utilisateur</Link></li>
+                  <li><Link href="/services">Refonte d'outils existants</Link></li>
+                </ul>
+              </Link>
             </div>
+
           </div>
         </div>
       </div>
 
       <div className={section}>
-        <div className={fullWidthContainer}>
+        <div className={container}>
           <h1 className={titleMargin + ' ' + titleGradient + ' ' + gradientOrange}>Secteurs d'activités</h1>
         </div>
 
@@ -444,22 +514,22 @@ function HomePage(state) {
               En permettant de vous concentrer sur votre passion et votre missions, nos solutions contribuent à améliorer l'organisation interner et à renforcer la participation de vos membres.
               Grâce à cette approche, votre association peut consacrer plus de temps à son activité principale et offrir une expérience optimale à vos membres, contribuant ainsi à votre croissance et à votre réussite continue.
             </p>
+
           </div>
         </div>
       </div>
 
       <div className={section + ' testimonial'}>
-          <div className={fullWidthContainer}>
+          <div className={container}>
             <h2>Ils nous font confiance !</h2>
             
-          
           </div>
       </div>
 
     
 
       <div className={section}>
-        <div className={fullWidthContainer}>
+        <div className={container}>
            <h2>Nos dernières réalisations</h2>
          </div>
 
@@ -475,7 +545,7 @@ function HomePage(state) {
 </div>
 
       <div className={section + ' gradient'}>
-        <div className={fullWidthContainer}>
+        <div className={container}>
           <h2>Une idée de projet ?</h2>     
           <span className="linkWrapper button">
             <Link href="/contact">Contactez nous !</Link>
