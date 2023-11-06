@@ -107,6 +107,26 @@ const Header = (state) => (
       <div className={`${nav} ${state.navOpen ? '' : hidden}`}>
         <div className={inner} onclick={ToggleNav} >
           {Logo(state, 'black')}
+        </div>
+        <nav>
+          <ul className="h1" onclick={ToggleNav}>
+            {Nav(state)}
+          </ul>
+        </nav>
+      </div>
+      <div className={inner}>
+        {Logo(state)}
+      </div>
+    </div>
+  </header>
+)
+
+/*const Header = (state) => (
+  <header className={`${header} ${state.location.route === '/' ? absolute : ''}`}>
+    <div className={fullWidthContainer}>
+      <div className={`${nav} ${state.navOpen ? '' : hidden}`}>
+        <div className={inner} onclick={ToggleNav} >
+          {Logo(state, 'black')}
           <button className="invert">
             Retour
           </button>
@@ -125,6 +145,6 @@ const Header = (state) => (
       </div>
     </div>
   </header>
-)
+)*/
 
 export default Header
