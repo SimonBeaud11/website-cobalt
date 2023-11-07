@@ -552,6 +552,10 @@ function HomePage(state) {
           </span> 
         </div>
       </div>
+
+      <div>
+        <x innerHTML={contents.find( objByProperty('databaseId', 1990) ).content} />
+      </div>
     </div>
   )
 }

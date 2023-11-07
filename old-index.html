@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+
+    <title>Cobalt - Creative IT Engineering</title>
+    <meta
+      name="description"
+      content="Cobalt Creative IT Engineering est une société de développement informatique basée à Bulle, en Suisse, qui propose des solutions informatiques sur mesure. Des sites web, des applications (app iOS et Android, WebApp) , des logiciels, ... nous sommes là pour vous accompagner dans tous vos projets digitaux."
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <meta name="theme-color" content="#0F0F0F" />
+
+    <!-- Open graph -->
+    <meta property="og:title" content="Cobalt - Creative IT Engineering" />
+    <meta
+      property="og:description"
+      content="Cobalt Creative IT Engineering est une société de développement informatique basée à Bulle, en Suisse, qui propose des solutions informatiques sur mesure. Des sites web, des applications (app iOS et Android, WebApp) , des logiciels, ... nous sommes là pour vous accompagner dans tous vos projets digitaux."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cobalt-it.ch" />
+    <meta property="og:image" content="https://cobalt-it.ch/card.png" />
+
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=26">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=26">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=26">
+    <link rel="manifest" href="/site.webmanifest?v=26">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=26" color="#fb8b61">
+    <link rel="shortcut icon" href="/favicon.ico?v=26">
+    <meta name="apple-mobile-web-app-title" content="Cobalt">
+    <meta name="application-name" content="Cobalt">
+    <meta name="msapplication-TileColor" content="#fb8b61">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- App entry point -->
+    <script type="module" defer src="/src/main.jsx"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFQ56EG6W7">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LFQ56EG6W7');
+
+    </script>
+    <script>
+      // IFRAME COBALT
+      //Listen to messages received by the IFrame
+      window.addEventListener("message", receiveMessage, false);
+
+      //timer that calls the adjust method every 10 ms
+      const timer = setInterval(() => {
+          sendMessage();
+      }, 10);
+
+      //Send message to the Iframe
+      function sendMessage(){
+        
+          var iframe = document.getElementById("ifrm").contentWindow;
+          iframe.postMessage(
+              JSON.stringify({ // Stringify to avoid to crash ( Some browsers only accept this )
+                  event: 'establishCommunication',
+                  message: 'Hello'
+                  }), document.getElementById("ifrm").src); // to the direct link of the source
+          
+      }
+
+
+      function receiveMessage(event) {
+          if (event.origin !== 'https://igruyere.ch') { // make sure the message is from the good one
+              return;
+          }
+
+          var object = JSON.parse(event.data);
+          if (object.event === 'resize') { // frame send a "resize" message with the height and width
+              document.getElementById("ifrm").style.height = object.height+"px";
+              document.getElementById("ifrm").style.width = object.width+"px";
+          }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="hyperstatic"></div>
+  </body>
+  <noscript>Activez JavaScript pour une meilleure expérience utilisateur</noscript>
+</html>

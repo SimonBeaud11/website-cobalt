@@ -37,42 +37,6 @@ export const init = (state, location) => [
                 title
                 excerpt
                 content
-
-                next {
-                  slug
-                  title
-                  excerpt
-                  date
-                  featuredImage {
-                    node {
-                      mediaItemUrl
-                      altText
-                    }
-                  }
-                  categories {
-                    nodes {
-                      categoryId
-                    }
-                  }
-                }
-                
-                previous {
-                  slug
-                  title
-                  excerpt
-                  date
-                  featuredImage {
-                    node {
-                      mediaItemUrl
-                      altText
-                    }
-                  }
-                  categories {
-                    nodes {
-                      categoryId
-                    }
-                  }
-                }
               }
             }`,
           variables: {
@@ -84,21 +48,6 @@ export const init = (state, location) => [
       if (!response.data.post) {
         return window.location.href = '/404'
       }
-      const nextPrevious = (nextprevious) => (response.data.post[nextprevious] && {
-        slug: response.data.post[nextprevious].slug,
-        title: response.data.post[nextprevious].title,
-        excerpt: response.data.post[nextprevious].excerpt,
-        time: response.data.post[nextprevious].date,
-        get date() {
-          return new Date(this.time).toLocaleDateString('fr-CH', { day: 'numeric', month: 'long', year: 'numeric' })
-        },
-        categoryId: response.data.post[nextprevious].categories.nodes[0].categoryId === 2 ? 2 : 3,
-        get featuredImage() {
-          return this.categoryId === 3 ? response.data.post[nextprevious].featuredImage.node : false
-        }
-      })
-      const previousSimplified = nextPrevious('previous')
-      const nextSimplified = nextPrevious('next')
       const simplified = () => {
         // date formatting
         const date = new Date(response.data.post.date)
@@ -112,8 +61,6 @@ export const init = (state, location) => [
           excerpt: response.data.post.excerpt,
           excerptRaw: response.data.post.excerpt.replaceAll(/<[^>]*>/g, ''),
           content: response.data.post.content,
-          previous: previousSimplified,
-          next: nextSimplified
         }
       }
       return simplified()
@@ -178,7 +125,7 @@ const ContactDetails = (state) => {
     <div className={wrapper}>
       <div className={container}>
         <header>
-          <h1>{contact.title}</h1>
+          <h1>Fiche de contact</h1>
         </header>
       </div>
         
